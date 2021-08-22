@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="intro">
+        <p>Create a New Event</p>
+        <hr  style="border-top: 1px solid black">
+       
+        <form class="form" onsubmit= "compareDate()">
+            <p>
+                <label for="type">Event Type:</label>
+                <select id="type">
+                    <option disable selected hidden> Choose One</option>
+                    <option>Birthday</option>
+                    <option>Wedding</option>
+                    <option>Christening</option>
+                </select>
+            </p>
+            <p>
+                <label for="title"> Event Title: </label> 
+                <input id="title" 
+                    type="text"
+                    pattern="[A-Za-z0-9\s]{5,25}" 
+                    style="width: 50%"
+                    required
+                >
+            </p> 
+            <p>
+                <label for="dates">Event Dates: </label> 
+                <input id = "eventDate1"
+                    type="date" 
+                    style="width: 23%"
+                    required
+                > to 
+                <input id="eventDate2" 
+                    type="date" 
+                    style="width: 23%" 
+                    required
+                >
+            </p>
+            <p>
+                <label for="posting"> Posting Date: </label> 
+                <input id="posting" 
+                    type="date" 
+                    style="width: 23%" 
+                    required
+                >
+            </p>
+
+            <input type="checkbox" id="check" name="r1">Is Registration Required?<br>
+            <input type="checkbox" id="check" name="r2">Is this event associated with any Family programs?<br>
+            <input type="checkbox" id="check" name="r3">Upon Registration Completion, Are Users to Receive an Auto Generated Email?<br>
+            <input type="checkbox" id="check" name="r4">Is there a Point of Contact?<br>
+            <input type="checkbox" id="check" name="r5">Is there a Hosting Command point of Contact?<br>
+            <br>
+            <div class="button">
+                <input type="submit" name="submit" value="Save">
+                <button onclick="cancel()">Cancel</button>
+                
+            </div> 
+    
+        </form>  
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
