@@ -15,3 +15,11 @@ today = yyyy+'-'+mm+'-'+dd;
 document.getElementById("eventDate1").setAttribute("min", today);
 document.getElementById("eventDate2").setAttribute("min", today);
 document.getElementById("posting").setAttribute("min", today);
+
+function cancel(){
+    alert("Are you sure you want to cancel?");
+}
+
+function save(){  
+    alert("Event Created");
+}
